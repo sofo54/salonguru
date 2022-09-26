@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "3773e515-b033-45b9-9ae0-babb49eb4bb0",
+		"name": "Salonguru",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18266312"
+	},
+	"item": [
+		{
+			"name": "Salon",
+			"item": [
+				{
+					"name": "Get all salons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/salon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"salon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all salons meta informations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/salon/meta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"salon",
+								"meta"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"identifier\":\"test@email.com\",\n    \"password\":\"test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Rating",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMzA2N2MwMTU1YTQyOTcyYTZiYTJjOSIsInR5cGUiOiJTYWxvbmd1cnUiLCJpYXQiOjE2NjQyMTIzMjEsImV4cCI6MTY2NDIxNTkyMX0.FuAOKqnD8WR19FE7cxYHlty3Zpk_TYEpftnAz80_4bc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"salonID\":\"633177a68a69d9821fbbfbe2\",\n    \"userID\":\"633067c0155a42972a6ba2ca\",\n    \"rating\":2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/rating",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"rating"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update rating",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"salonID\":\"633177a68a69d9821fbbfbe2\",\n    \"userID\":\"633067c0155a42972a6ba2c9\",\n    \"customerID\":\"6331776bf54f693e3ee8b1e0\",\n    \"rating\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/rating",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"rating"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete rating",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"salonID\":\"633177a68a69d9821fbbfbe2\",\n    \"userID\":\"633067c0155a42972a6ba2c9\",\n    \"customerID\":\"6331776bf54f693e3ee8b1e0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/rating",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"rating"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"salonID\":\"633177a68a69d9821fbbfbdd\",\n    \"userID\":\"633067c0155a42972a6ba2c9\",\n    \"customerID\":\"633165e63f0cc10e26a93a01\",\n    \"comment\": \"blabla 4\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/comment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"comment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
